@@ -1,5 +1,5 @@
 # Start from the code-server Debian base image
-FROM codercom/code-server:4.0.2
+FROM codercom/code-server:4.4.0
 
 USER coder
 
@@ -35,7 +35,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # -----------
 
 # Install NodeJS
-RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
+RUN sudo curl -fsSL https://deb.nodesource.com/setup_16.15.0 | sudo bash -
 RUN sudo apt-get install -y nodejs
 
 # Port
